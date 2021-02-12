@@ -1,0 +1,12 @@
+{
+  "name": "com.zigurous.template",
+  "version": "0.1.0",
+  "displayName": "Zigurous Template",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "unity": "2019.4",
+  "author": {
+    "name": "Zigurous",
+    "email": "support@zigurous.com",
+    "url": "https://zigurous.com"
+  }
+}
