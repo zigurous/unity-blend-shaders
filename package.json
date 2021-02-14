@@ -1,8 +1,8 @@
 {
-  "name": "com.zigurous.template",
+  "name": "com.zigurous.shaders.blending",
   "version": "0.1.0",
-  "displayName": "Zigurous Template",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "displayName": "Zigurous Blend Shaders",
+  "description": "A collection of shaders for blending objects (based on Photoshop's blend modes).",
   "unity": "2019.4",
   "author": {
     "name": "Zigurous",

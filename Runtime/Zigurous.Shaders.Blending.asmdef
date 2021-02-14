@@ -1,8 +1,6 @@
 {
-    "name": "Zigurous.Template.Tests",
-    "references": [
-        "GUID:2dcb02c4ba1b25141b7cb25e25135974"
-    ],
+    "name": "Zigurous.Shaders.Blending",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
