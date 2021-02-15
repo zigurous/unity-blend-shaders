@@ -2,7 +2,7 @@
   "name": "com.zigurous.shaders.blending",
   "version": "0.1.0",
   "displayName": "Zigurous Blend Shaders",
-  "description": "A collection of shaders for blending objects (based on Photoshop's blend modes).",
+  "description": "Shaders for blending objects in Unity (based on Photoshop's blend modes).",
   "unity": "2019.4",
   "author": {
     "name": "Zigurous",
