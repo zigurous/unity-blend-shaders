@@ -1,5 +1,33 @@
 # Blend Shaders
 
+The Blend Shaders package provides standard surface shaders for blending objects in Unity (based on Photoshop's blend modes). There's also an include file with functions for each blend mode.
+
+## Supported Modes
+
+- Add
+- Average
+- Color Burn
+- Color Dodge
+- Darken
+- Difference
+- Exclusion
+- Glow
+- Hard Light
+- Hard Mix
+- Lighten
+- Linear Dodge
+- Linear Light
+- Multiply
+- Negation
+- Overlay
+- Phoenix
+- Pin Light
+- Reflect
+- Screen
+- Soft Light
+- Subtract
+- Vivid Light
+
 ## Installation
 
 The Unity Package Manager can load a package from a Git repository on a remote server.
