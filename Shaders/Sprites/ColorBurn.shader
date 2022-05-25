@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/2D/Color Burn"
+﻿Shader "Zigurous/Blending/Sprites/Color Burn"
 {
     Properties
     {

@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/2D/Negation"
+﻿Shader "Zigurous/Blending/Sprites/Negation"
 {
     Properties
     {

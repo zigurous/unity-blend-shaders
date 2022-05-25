@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/2D/Hard Mix"
+﻿Shader "Zigurous/Blending/Sprites/Vivid Light"
 {
     Properties
     {
@@ -72,7 +72,7 @@
                 fixed4 a = tex2D(_MainTex, i.uv_MainTex) * _Color;
                 fixed4 b = tex2D(_BlendTex, i.uv_BlendTex) * _BlendColor;
 
-                return fixed4(lerp(a, hardMix(a, b), _BlendColor.a), a.a) * i.color;
+                return fixed4(lerp(a, vividLight(a, b), _BlendColor.a), a.a) * i.color;
             }
 
             ENDCG
