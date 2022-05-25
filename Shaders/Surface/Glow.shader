@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Glow"
+﻿Shader "Zigurous/Blending/Surface/Glow"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,11 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 glow(fixed3 a, fixed3 b)
-        {
-            return (a == 1.0) ? a : min(b * b / (1.0 - a), 1.0);
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

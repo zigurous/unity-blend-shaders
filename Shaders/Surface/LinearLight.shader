@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Linear Light"
+﻿Shader "Zigurous/Blending/Surface/Linear Light"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,21 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 linearBurn(fixed3 a, fixed3 b)
-        {
-            return max(a + b - 1.0, 0.0);
-        }
-
-        fixed3 linearDodge(fixed3 a, fixed3 b)
-        {
-            return min(a + b, 1.0);
-        }
-
-        fixed3 linearLight(fixed3 a, fixed3 b)
-        {
-            return b < 0.5 ? linearBurn(a, (2.0 * b)) : linearDodge(a, (2.0 * (b - 0.5)));
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

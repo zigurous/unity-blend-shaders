@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Soft Light"
+﻿Shader "Zigurous/Blending/Surface/Soft Light"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,11 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 softLight(fixed3 a, fixed3 b)
-        {
-            return (b < 0.5) ? (2.0 * a * b + a * a * (1.0 - 2.0 * b)) : (sqrt(a) * (2.0 * b - 1.0) + 2.0 * a * (1.0 - b));
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

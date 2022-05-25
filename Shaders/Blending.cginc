@@ -40,7 +40,7 @@ fixed3 glow(fixed3 a, fixed3 b)
 
 fixed3 hardLight(fixed3 a, fixed3 b)
 {
-    return b < 0.5 ? (2.0 * b * a) : (1.0 - 2.0 * (1.0 - b) * (1.0 - a));
+    return b < 0.5 ? (2.0 * a * b) : (1.0 - 2.0 * (1.0 - a) * (1.0 - b));
 }
 
 fixed3 lighten(fixed3 a, fixed3 b)
@@ -105,7 +105,7 @@ fixed3 screen(fixed3 a, fixed3 b)
 
 fixed3 softLight(fixed3 a, fixed3 b)
 {
-    return (b < 0.5) ? (2.0 * a * b + a * a * (1.0 - 2.0 * b)) : (sqrt(a) * (2.0 * b - 1.0) + 2.0 * a * (1.0 - b));
+    return (b < 0.5) ? (2.0 * a * b + a * a * (1.0 - 2.0 * b)) : (sqrt(a) * (2.0 * b - 1.0) + (2.0 * a) * (1.0 - b));
 }
 
 fixed3 subtract(fixed3 a, fixed3 b)

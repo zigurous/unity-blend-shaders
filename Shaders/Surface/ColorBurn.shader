@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Color Burn"
+﻿Shader "Zigurous/Blending/Surface/Color Burn"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,11 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 colorBurn(fixed3 a, fixed3 b)
-        {
-            return b == 0.0 ? b : max((1.0 - ((1.0 - a) / b)), 0.0);
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

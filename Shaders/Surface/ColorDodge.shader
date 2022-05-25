@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Color Dodge "
+﻿Shader "Zigurous/Blending/Surface/Color Dodge"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,11 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 colorDodge(fixed3 a, fixed3 b)
-        {
-            return b == 1.0 ? b : min(a / (1.0 - b), 1.0);
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

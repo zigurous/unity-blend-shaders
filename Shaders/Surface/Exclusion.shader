@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Exclusion"
+﻿Shader "Zigurous/Blending/Surface/Exclusion"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,11 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 exclusion(fixed3 a, fixed3 b)
-        {
-            return a + b - 2.0 * a * b;
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Overlay"
+﻿Shader "Zigurous/Blending/Surface/Overlay"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,11 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 overlay(fixed3 a, fixed3 b)
-        {
-            return a < 0.5 ? (2.0 * a * b) : (1.0 - 2.0 * (1.0 - a) * (1.0 - b));
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

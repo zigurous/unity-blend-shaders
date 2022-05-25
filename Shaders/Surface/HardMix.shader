@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Hard Mix"
+﻿Shader "Zigurous/Blending/Surface/Hard Mix"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,26 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 colorBurn(fixed3 a, fixed3 b)
-        {
-            return b == 0.0 ? b : max((1.0 - ((1.0 - a) / b)), 0.0);
-        }
-
-        fixed3 colorDodge(fixed3 a, fixed3 b)
-        {
-            return b == 1.0 ? b : min(a / (1.0 - b), 1.0);
-        }
-
-        fixed3 vividLight(fixed3 a, fixed3 b)
-        {
-            return (b < 0.5) ? colorBurn(a, (2.0 * b)) : colorDodge(a, (2.0 * (b - 0.5)));
-        }
-
-        fixed3 hardMix(fixed3 a, fixed3 b)
-        {
-            return vividLight(a, b) < 0.5 ? 0.0 : 1.0;
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

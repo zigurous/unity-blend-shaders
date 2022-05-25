@@ -1,4 +1,4 @@
-﻿Shader "Zigurous/Blending/Pin Light"
+﻿Shader "Zigurous/Blending/Surface/Pin Light"
 {
     Properties
     {
@@ -19,6 +19,8 @@
 
         CGPROGRAM
 
+        #include "../Blending.cginc"
+
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
@@ -36,21 +38,6 @@
 
         half _Glossiness;
         half _Metallic;
-
-        fixed3 darken(fixed3 a, fixed3 b)
-        {
-            return min(a, b);
-        }
-
-        fixed3 lighten(fixed3 a, fixed3 b)
-        {
-            return max(a, b);
-        }
-
-        fixed3 pinLight(fixed3 a, fixed3 b)
-        {
-            return (b < 0.5) ? darken(a, (2.0 * b)) : lighten(a, (2.0 * (b - 0.5)));
-        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
