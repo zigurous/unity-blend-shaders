@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/zigurous/unity-blend-shaders) [![](https://img.shields.io/github/package-json/v/zigurous/unity-blend-shaders)](https://github.com/zigurous/unity-blend-shaders/releases) [![](https://img.shields.io/github/license/zigurous/unity-blend-shaders)](https://github.com/zigurous/unity-blend-shaders/blob/main/LICENSE.md)
 
-The **Blend Shaders** package provides standard surface shaders for blending objects in Unity (based on Photoshop's blend modes). The package supports over 20 different blend modes, and it contains a cginc file with a standalone function for each of the blend modes.
+The **Blend Shaders** package contains over 20 shaders for blending textures and sprites in Unity (based on Photoshop's blend modes), and it contains a cginc file with a standalone function for each of the blend modes.
 
 ## Supported Modes
 
