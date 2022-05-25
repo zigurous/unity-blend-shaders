@@ -1,6 +1,6 @@
 {
   "name": "com.zigurous.shaders.blending",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "displayName": "Blend Shaders",
   "description": "The Blend Shaders package provides standard surface shaders for blending objects in Unity (based on Photoshop's blend modes).\n\nSupported Modes:\n\u2022 Add\n\u2022 Average\n\u2022 Color Burn\n\u2022 Color Dodge\n\u2022 Darken\n\u2022 Difference\n\u2022 Exclusion\n\u2022 Glow\n\u2022 Hard Light\n\u2022 Hard Mix\n\u2022 Lighten\n\u2022 Linear Burn\n\u2022 Linear Dodge\n\u2022 Linear Light\n\u2022 Multiply\n\u2022 Negation\n\u2022 Overlay\n\u2022 Phoenix\n\u2022 Pin Light\n\u2022 Reflect\n\u2022 Screen\n\u2022 Soft Light\n\u2022 Subtract\n\u2022 Vivid Light",
   "unity": "2019.4",
